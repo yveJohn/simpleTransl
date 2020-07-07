@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/layui/css/layui.css">
+    <script src="public/layui/layui.js"></script>
+    <script src="./preload.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>111</h1>
+    <div class="layui-row">
+        <div class="layui-col-md6">
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea" id="testText"></textarea>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+            </div>
+        </div>
+      </div>
+</body>
+<script>
+    var $;
+    layui.use(['layer', 'form'], function(){
+        var form = layui.form;
+        $ = layui.$;
+    })
+
+    function initSimpleTransl(payload){
+        
+        console.log("用户主动调用");
+        console.log("payload",payload);
+        console.log($);
+        $("#testText").val(payload);
+    }
+</script>
+</html>

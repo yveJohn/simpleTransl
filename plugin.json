@@ -1,0 +1,31 @@
+{
+	"pluginName": "简单翻译",
+	"description": "简单的中英文翻译",
+	"main": "index.html",
+    "version": "0.0.1",
+    "author" : "yvejohn",
+    "preload":"preload.js",
+    "logo": "simpleTransl.png",
+	"features": [
+		{
+		  "code": "hello",
+          "explain": "simpleTransl",
+          "icon": "simpleTransl.png",
+		  "cmds":[
+            {
+                "type": "regex",
+                "label": "简单翻译",
+                "match":"/^翻译+/",
+                "minLength": 1,
+                "maxLength": 5000
+            },
+            {
+                "type": "over",
+                "label": "简单翻译",
+                "minLength": 1,
+                "maxLength": 5000
+            }
+          ]
+		}
+	]
+}
